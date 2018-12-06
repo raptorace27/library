@@ -1,5 +1,4 @@
 from django import forms
-from django.forms import BaseInlineFormSet
 
 from .models import Plugin, PluginAuthorship
 
