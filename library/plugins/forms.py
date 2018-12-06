@@ -1,4 +1,5 @@
 from django import forms
+from django.forms import BaseInlineFormSet
 
 from .models import Plugin, PluginAuthorship
 
@@ -87,5 +88,5 @@ class PluginAuthorshipFormSet(forms.inlineformset_factory(
                 user_not_in_author_list = False
         if user_not_in_author_list:
             raise forms.ValidationError('You must enter yourself as an author. '
-                                        'Save the plugin to ad additional authors.', code='author_error1')
+                                        'Save the plugin to add additional authors.', code='author_error1')
         return
